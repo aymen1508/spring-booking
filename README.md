@@ -11,13 +11,20 @@ This project is a Java-based web application built with Spring Boot. It handles 
 - `.vscode`: Contains Visual Studio Code workspace settings.
 
 ## Key Components
-- `BookingController`: This is a REST controller that handles HTTP requests related to bookings. It is mapped to the `/api/v1/bookings` URL path.
-- `BookingService`: This is a service class that contains business logic related to bookings.
-- `ClientService`: This is a service class that contains business logic related to clients.
-- `HotelService`: This is a service class that contains business logic related to hotels.
+There are 4 main components:
+- `bookings`
+- `hotels`
+- `clients`
+- `hosts`
+
+Each of them has 4 files:
+- `Controller`: This is a REST controller that handles HTTP requests related to the component. It is mapped to the `/api/v1/{componentName}` URL path.
+- `Service`: This is a service class that contains business logic related to the component.
+- `Repository`: This is an interface that extends `JpaRepository` or `CrudRepository` and provides methods to perform CRUD operations on the component's data. It interacts with the database and retrieves the data needed by the Service layer.
+- `Entity Mapper`: This is a utility class or interface that provides methods to convert the component's data entity objects to DTO (Data Transfer Object) and vice versa. It is used to ensure that sensitive or unnecessary information is not exposed to the user and to decouple the domain layer from the persistence layer.
 
 ## OpenAPI Specs
-- Visit [link](http://localhost:8080/swagger-ui.html) after running the server.
+- Visit this [link](http://localhost:8080/swagger-ui.html) after running the server.
 
 ## Build and Run
 The project uses Maven for dependency management and build automation. You can build and run the project using the following commands:
