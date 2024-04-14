@@ -17,7 +17,7 @@ This project is a Java-based web application built with Spring Boot. It handles 
 - `HotelService`: This is a service class that contains business logic related to hotels.
 
 ## OpenAPI Specs
-- Visit <localhost:8080/swagger-ui.html> after running the server.
+- Visit [link](http://localhost:8080/swagger-ui.html) after running the server.
 
 ## Build and Run
 The project uses Maven for dependency management and build automation. You can build and run the project using the following commands:
